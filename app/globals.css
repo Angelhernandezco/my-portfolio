@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e7e2dd;
+  --foreground: #141313;
+  --hero-dark: #0b0b0c;
+  --ink-dark: #f0ece8;
+  --accent: #111111;
+  --accent-soft: #5c5c5c;
 }
 
 @theme inline {
@@ -12,15 +16,202 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "Helvetica Neue", Arial, sans-serif;
+}
+
+.bg-hero {
+  background-color: var(--background);
+}
+
+.bg-hero-dark {
+  background-color: var(--hero-dark);
+}
+
+.text-ink {
+  color: var(--foreground);
+}
+
+.text-ink-dark {
+  color: var(--ink-dark);
+}
+
+.nav-link {
+  position: relative;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.toggle-btn {
+  border: 1px solid currentColor;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--accent);
+  color: #f4f0ec;
+}
+
+.dark .toggle-btn:hover {
+  background: #f4f0ec;
+  color: #0b0b0c;
+}
+
+.hero-title {
+  font-size: clamp(32px, 6vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.dark .hero-subtitle {
+  color: #b0aba6;
+}
+
+.hero-tag {
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.hero-name {
+  font-size: clamp(32px, 6vw, 100px);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.portrait-frame {
+  position: relative;
+  width: min(320px, 70vw);
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #c9c2bc, #f7f2ed);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.dark .portrait-frame {
+  background: linear-gradient(135deg, #2d2a28, #141313);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.portrait-glow {
+  position: absolute;
+  inset: 14%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45), transparent 65%);
+  mix-blend-mode: screen;
+  opacity: 0.75;
+}
+
+.dark .portrait-glow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 65%);
+}
+
+.page-reveal {
+  position: fixed;
+  inset: 0;
+  background: #050505;
+  z-index: 50;
+  transform: translateY(0);
+  animation: page-reveal 1.2s cubic-bezier(0.7, 0, 0.25, 1) 0.2s forwards;
+}
+
+.hero-rise {
+  animation: hero-rise 1.1s cubic-bezier(0.2, 0.6, 0.2, 1) 0.7s both;
+}
+
+.animate-soft-rise {
+  animation: soft-rise 0.9s ease 0.9s both;
+}
+
+.falling-text {
+  display: inline-block;
+}
+
+@keyframes page-reveal {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes hero-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .toggle-btn {
+    padding: 6px 10px;
+  }
+
+  .hero-tag {
+    letter-spacing: 0.12em;
+  }
+
+  header {
+    position: relative;
+  }
+
+  main {
+    min-height: auto;
+  }
 }
