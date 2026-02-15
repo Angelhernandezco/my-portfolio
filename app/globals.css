@@ -16,6 +16,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -213,5 +217,39 @@ body {
 
   main {
     min-height: auto;
+  }
+}
+
+/* Scroll Container */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+}
+
+/* Sections Scroll Snap */
+section[data-snap] {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+main[data-snap] {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Skills Section */
+.skill-card {
+  perspective: 1000px;
+}
+
+.skill-card:hover {
+  animation: float 0.6s ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }

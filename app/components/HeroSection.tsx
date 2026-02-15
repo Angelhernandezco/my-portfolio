@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ role, maker }: HeroSectionProps) {
   return (
-    <main className="flex h-[calc(100vh-80px)] w-full items-center overflow-hidden">
+    <main className="flex min-h-[calc(100vh-80px)] w-full items-center overflow-hidden pt-30" data-snap>
       <div className="mx-auto grid w-full gap-10 px-6 sm:px-10 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="hero-rise space-y-6">
           <div className="space-y-4">

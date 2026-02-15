@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { Header } from "@/app/components/Header";
 import { HeroSection } from "@/app/components/HeroSection";
-import { copy } from "@/app/utils/content";
+import { Skills } from "@/app/components/Skills";
+import { copy, skills } from "@/app/utils/content";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -42,7 +43,7 @@ export default function Home() {
   const content = copy[lang];
 
   return (
-    <div className="min-h-screen bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark">
+    <div className="scroll-container h-screen overflow-y-scroll bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark">
       <div className="page-reveal" aria-hidden="true" />
       <Header
         isDark={isDark}
@@ -53,6 +54,11 @@ export default function Home() {
         onMobileMenuToggle={() => setMobileMenuOpen((prev) => !prev)}
       />
       <HeroSection role={content.role} maker={content.maker} />
+      <Skills
+        skills={skills}
+        title={content.skillsTitle}
+        subtitle={content.skillsSubtitle}
+      />
     </div>
   );
 }
