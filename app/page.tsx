@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { Header } from "@/app/components/Header";
 import { HeroSection } from "@/app/components/HeroSection";
 import { Skills } from "@/app/components/Skills";
-import { copy, skills } from "@/app/utils/content";
+import { About } from "@/app/components/About";
+import { copy, skills, about } from "@/app/utils/content";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -58,6 +59,10 @@ export default function Home() {
         skills={skills}
         title={content.skillsTitle}
         subtitle={content.skillsSubtitle}
+      />
+      <About
+        content={about.find((item) => item.title === lang) || about[0]}
+        title={content.aboutTitle}
       />
     </div>
   );
