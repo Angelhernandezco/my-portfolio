@@ -47,7 +47,7 @@ export default function Home() {
   const content = copy[lang];
 
   return (
-    <div className="scroll-container h-screen overflow-y-scroll bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark">
+    <div className="scroll-container h-screen overflow-y-scroll bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark md:pt-20 pt-40">
       <div className="page-reveal" aria-hidden="true" />
       <Header
         isDark={isDark}

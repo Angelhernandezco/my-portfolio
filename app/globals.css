@@ -221,10 +221,6 @@ body {
     letter-spacing: 0.12em;
   }
 
-  header {
-    position: relative;
-  }
-
   main {
     min-height: auto;
   }
