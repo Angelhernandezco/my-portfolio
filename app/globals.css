@@ -102,9 +102,12 @@ body {
 
 .avatar {
   position: relative;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
-  border-radius: 9999;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
 .dark .hero-subtitle {

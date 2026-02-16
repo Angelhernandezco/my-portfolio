@@ -20,8 +20,9 @@ export function About({ content, title }: AboutProps) {
               <Image
                 src="/portrait.jpeg"
                 alt="Angel Hernandez"
-                fill
-                className="object-cover"
+                width={150}
+                height={150}
+                className="object-cover rounded-full"
                 priority
               />
             </div>
