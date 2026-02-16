@@ -117,12 +117,12 @@ export const about: AboutContent[] = [
   {
     title: "es",
     aboutText: [
-      "Soy estudiante de Ingeniería en Software en el 6º semestre de la Universidad Autónoma de Sinaloa, apasionado por la programación, especialmente en desarrollo web y móvil.",
-      "Disfruto construir soluciones eficientes y escalables, ya sea una aplicación móvil con Swift o Kotlin, o una aplicación web con React & Tailwind CSS para el frontend y Node.js & TypeScript para el backend.",
+      "Soy estudiante de Ingeniería en Software en la Universidad Autónoma de Sinaloa, con un GPA de 3.9 y graduación esperada en 2026. Me apasiona el desarrollo de software, especialmente en aplicaciones web y móviles, y disfruto creando soluciones eficientes y escalables.",
+      "Tengo experiencia en gestión de ERP (SAP Business One), desarrollo de Add-Ons personalizados, automatización de procesos internos y construcción de plataformas web internas con Angular y FastAPI, enfocadas en mejorar la eficiencia y la seguridad de los sistemas.",
     ],
     whatSetsText: [
-      "Tengo experiencia práctica construyendo aplicaciones móviles con Swift y Kotlin, con integración de bases de datos en la nube.",
-      "He gestionado un equipo para desarrollar un sitio web educativo interactivo para niños y adolescentes, asegurando una experiencia fácil de usar desde el diseño hasta el despliegue. Destaco en entornos colaborativos y disfruto enfrentando desafíos que fortalecen mis habilidades.",
+      "Me caracterizo por aprender nuevas tecnologías rápidamente y adaptarme a distintos entornos técnicos, desde frameworks frontend o backend hasta bases de datos y sistemas empresariales como SAP.",
+      "He liderado y colaborado en proyectos que requieren atención a la experiencia del usuario, optimización del código y seguridad de datos, demostrando capacidades tanto técnicas como de trabajo en equipo.",
     ],
     timeline: [
       {
@@ -135,15 +135,15 @@ export const about: AboutContent[] = [
       {
         year: "Feb 2025 - Dic 2025",
         title: "SL Agrícola",
-        subtitle: "Software Engineering Intern",
-        description: "Practicante de Ingeniería de Software (Part-Time) en UAS",
+        subtitle: "Practicante de Desarrollo de Software",
+        description: "Practicante de medio tiempo",
         color: "#f59e0b",
       },
       {
         year: "Sep 2025 - Mar 2026",
         title: "Universidad Autónoma de Sinaloa",
-        subtitle: "Software Development Intern",
-        description: "Practicante de Desarrollo de Software (Servicio Social)",
+        subtitle: "Practicante de Desarrollo de Software",
+        description: "Servicio Social en UAS",
         color: "#8b5cf6",
       },
       {
@@ -158,12 +158,12 @@ export const about: AboutContent[] = [
   {
     title: "en",
     aboutText: [
-      "I'm a Software Engineering student in my 6th semester at Universidad Autónoma de Sinaloa, passionate about programming, especially in web and mobile development.",
-      "I enjoy building efficient and scalable solutions, whether it's a mobile app with Swift or Kotlin, or a web app with React & Tailwind CSS for the frontend and Node.js & TypeScript for the backend.",
+      "I am a Software Engineering student at Universidad Autónoma de Sinaloa, with a 3.9 GPA and expected graduation in 2026. I am passionate about software development, especially web and mobile applications, and I enjoy building efficient and scalable solutions.",
+      "I have experience in ERP management (SAP Business One), developing custom Add-Ons, automating internal processes, and building internal web platforms with Angular and FastAPI, focused on improving system efficiency and security.",
     ],
     whatSetsText: [
-      "I have hands-on experience building Mobile Apps with Swift and Kotlin, with cloud database integration.",
-      "I've managed a team to develop an engaging educational website for children and adolescents, ensuring a user-friendly experience from design to deployment. I thrive in collaborative environments and enjoy tackling challenges that push my skills further.",
+      "I am characterized by my ability to quickly learn new technologies and adapt to different technical environments, from frontend and backend frameworks to databases and enterprise systems like SAP.",
+      "I've led and collaborated on projects that require attention to user experience, code optimization, and data security, demonstrating both technical expertise and strong teamwork skills.",
     ],
     timeline: [
       {
@@ -177,14 +177,14 @@ export const about: AboutContent[] = [
         year: "Feb 2025 - Dec 2025",
         title: "SL Agrícola",
         subtitle: "Software Engineering Intern",
-        description: "Part-Time Internship at UAS",
+        description: "Part-Time Internship",
         color: "#f59e0b",
       },
       {
         year: "Sep 2025 - Mar 2026",
         title: "Universidad Autónoma de Sinaloa",
         subtitle: "Software Development Intern",
-        description: "Social Service Internship",
+        description: "Social Service at UAS",
         color: "#8b5cf6",
       },
       {
