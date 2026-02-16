@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import { Header } from "@/app/components/Header";
 import { HeroSection } from "@/app/components/HeroSection";
+import { Projects } from "@/app/components/Projects";
 import { Skills } from "@/app/components/Skills";
 import { About } from "@/app/components/About";
+import { Experience } from "@/app/components/Experience";
 import { Contact } from "@/app/components/Contact";
-import { copy, skills, about } from "@/app/utils/content";
+import { copy, skills, projects, about, experiences } from "@/app/utils/content";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -55,11 +57,14 @@ export default function Home() {
         mobileMenuOpen={mobileMenuOpen}
         onMobileMenuToggle={() => setMobileMenuOpen((prev) => !prev)}
       />
-      <HeroSection role={content.role} maker={content.maker} />
+      <HeroSection titleLine1={content.titleLine1} titleLine2={content.titleLine2} role={content.role} maker={content.maker} />
+      <Projects projects={projects} title={content.projectsTitle} />
+      <Experience experiences={experiences} title={content.experienceTitle} />
       <Skills
         skills={skills}
         title={content.skillsTitle}
         subtitle={content.skillsSubtitle}
+        proficiencyLabel={content.proficiencyLabel}
       />
       <About
         content={about.find((item) => item.title === lang) || about[0]}

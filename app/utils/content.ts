@@ -1,6 +1,7 @@
 import type { Skill } from "@/app/types/skills";
 import type { AboutContent } from "@/app/types/about";
 import type { Project } from "@/app/types/projects";
+import type { TimelineExperience } from "@/app/types/experience";
 import {
   SiReact,
   SiTypescript,
@@ -28,7 +29,7 @@ export const copy = {
     titleLine1: "INGENIERO",
     titleLine2: "DE SOFTWARE",
     role: "— PERFIL FULL STACK",
-    nav: ["Proyectos", "Sobre mi", "Contacto"],
+    nav: ["Proyectos", "Sobre mi", "Experiencia", "Contacto"],
     maker: "CREADOR DE COSAS CON\nPASION Y EXCELENCIA",
     projectsTitle: "PROYECTOS",
     skillsTitle: "HABILIDADES",
@@ -36,6 +37,7 @@ export const copy = {
       "PASA EL MOUSE SOBRE UNA HABILIDAD PARA VER EL NIVEL DE PROFICIENCIA",
     proficiencyLabel: "Proficiencia",
     aboutTitle: "SOBRE MÍ",
+    experienceTitle: "EXPERIENCIA LABORAL",
     contactTitle: "CONTACTO",
     contactSubtitle: "Tengo justo lo que necesitas. Hablemos.",
     phone: "+52 (668) 241 9119",
@@ -55,13 +57,14 @@ export const copy = {
     titleLine1: "SOFTWARE",
     titleLine2: "ENGINEER",
     role: "— FULL STACK CAPABLE",
-    nav: ["Projects", "About", "Contact"],
+    nav: ["Projects", "About", "Experience", "Contact"],
     maker: "MAKER OF THINGS WITH\nPASSION AND EXCELLENCE",
     projectsTitle: "PROJECTS",
     skillsTitle: "SKILLS",
     skillsSubtitle: "HOVER OVER A SKILL FOR CURRENT PROFICIENCY",
     proficiencyLabel: "Proficiency",
     aboutTitle: "ABOUT ME",
+    experienceTitle: "WORK EXPERIENCE",
     contactTitle: "CONTACT",
     contactSubtitle: "I have got just what you need. Lets talk.",
     phone: "+52 (668) 241 9119",
@@ -221,5 +224,50 @@ export const projects: Project[] = [
     links: {
       preview: "https://adventjs.dev",
     },
+  },
+];
+
+export const experiences: TimelineExperience[] = [
+  {
+    id: "exp-1",
+    position: "Practicante de Ingeniería de Software",
+    company: "SL Agrícola Ruiz Cortines",
+    location: "Sinaloa, México",
+    startDate: "Feb 2025",
+    endDate: "Dic 2025",
+    status: "Tiempo Parcial",
+    description: [
+      "Gestioné y personalicé SAP Business One ERP mejorando flujos de trabajo internos y manejo de datos empresariales",
+      "Desarrollé consultas SQL avanzadas en SAP HANA para soportar reportes y automatización operacional",
+      "Creé Add-Ons personalizados de SAP alineados con requerimientos específicos del negocio",
+      "Diseñé y desarrollé una plataforma web basada en Angular para centralizar Add-Ons por rol de usuario y empresa",
+      "Implementé automatización dinámica de formularios para optimizar procesos internos y reducir input manual",
+      "Integré aplicaciones web con servicios backend usando Python y FastAPI",
+    ],
+    technologies: [
+      "SAP Business One",
+      "SAP HANA",
+      "SQL",
+      "Angular",
+      "Python",
+      "FastAPI",
+    ],
+  },
+  {
+    id: "exp-2",
+    position: "Practicante de Desarrollo de Software",
+    company: "Universidad Autónoma de Sinaloa Los Mochis",
+    location: "Sinaloa, México",
+    startDate: "Sep 2025",
+    endDate: "Mar 2026",
+    status: "Servicio Social",
+    description: [
+      "Contribuí al desarrollo y mejora de la plataforma 'Jornada Universitaria del Conocimiento'",
+      "Desarrollé características frontend usando Angular para mejorar usabilidad y navegación",
+      "Colaboré en mejoras backend usando Django enfocándome en optimización de código y mantenibilidad",
+      "Implementé nuevos módulos de estadísticas para soportar visualización de datos y reportes",
+      "Agregué restricciones de acceso y reglas de validación para mejorar seguridad e integridad de datos",
+    ],
+    technologies: ["Angular", "Django", "Python", "Frontend", "Backend"],
   },
 ];
