@@ -7,17 +7,21 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiJavascript,
-  SiNodedotjs,
   SiPostgresql,
-  SiMongodb,
   SiFirebase,
   SiGit,
   SiPython,
-  SiGraphql,
-  SiAmazon,
-  SiDocker,
+  SiSap,
+  SiPrisma,
+  SiExpress,
+  SiFastapi,
+  SiSass,
+  SiMysql,
+  SiAngular,
+  SiSpring,
 } from "react-icons/si";
-import { FaHtml5, FaCss3Alt, FaDatabase } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJava } from "react-icons/fa";
+import { DiMsqlServer } from "react-icons/di";
 
 export const copy = {
   es: {
@@ -30,6 +34,7 @@ export const copy = {
     skillsTitle: "HABILIDADES",
     skillsSubtitle:
       "PASA EL MOUSE SOBRE UNA HABILIDAD PARA VER EL NIVEL DE PROFICIENCIA",
+    proficiencyLabel: "Proficiencia",
     aboutTitle: "SOBRE MÍ",
     contactTitle: "CONTACTO",
     contactSubtitle: "Tengo justo lo que necesitas. Hablemos.",
@@ -55,6 +60,7 @@ export const copy = {
     projectsTitle: "PROJECTS",
     skillsTitle: "SKILLS",
     skillsSubtitle: "HOVER OVER A SKILL FOR CURRENT PROFICIENCY",
+    proficiencyLabel: "Proficiency",
     aboutTitle: "ABOUT ME",
     contactTitle: "CONTACT",
     contactSubtitle: "I have got just what you need. Lets talk.",
@@ -74,24 +80,37 @@ export const copy = {
 } as const;
 
 export const skills: Skill[] = [
-  { name: "React", icon: SiReact, proficiency: 95, color: "#61DAFB" },
-  { name: "TypeScript", icon: SiTypescript, proficiency: 90, color: "#3178C6" },
-  { name: "Next.js", icon: SiNextdotjs, proficiency: 90, color: "#000000" },
-  { name: "Tailwind", icon: SiTailwindcss, proficiency: 95, color: "#06B6D4" },
-  { name: "JavaScript", icon: SiJavascript, proficiency: 95, color: "#F7DF1E" },
-  { name: "Node.js", icon: SiNodedotjs, proficiency: 85, color: "#339933" },
-  { name: "CSS", icon: FaCss3Alt, proficiency: 90, color: "#1572B6" },
-  { name: "HTML", icon: FaHtml5, proficiency: 95, color: "#E34C26" },
-  { name: "MySQL", icon: FaDatabase, proficiency: 80, color: "#00758F" },
-  { name: "MongoDB", icon: SiMongodb, proficiency: 80, color: "#13AA52" },
-  { name: "Firebase", icon: SiFirebase, proficiency: 85, color: "#FFCA28" },
-  { name: "Git", icon: SiGit, proficiency: 90, color: "#F1502F" },
-  { name: "Python", icon: SiPython, proficiency: 75, color: "#3776AB" },
-  { name: "PostgreSQL", icon: SiPostgresql, proficiency: 80, color: "#336791" },
-  { name: "GraphQL", icon: SiGraphql, proficiency: 75, color: "#E10098" },
-  { name: "AWS", icon: SiAmazon, proficiency: 70, color: "#FF9900" },
-  { name: "Docker", icon: SiDocker, proficiency: 70, color: "#2496ED" },
-  { name: "REST API", icon: SiNextdotjs, proficiency: 90, color: "#000000" },
+  { name: "Java", icon: FaJava, proficiency: 50, color: "#007396" },
+  { name: "Python", icon: SiPython, proficiency: 70, color: "#3776AB" },
+  { name: "JavaScript", icon: SiJavascript, proficiency: 80, color: "#F7DF1E" },
+  {
+    name: "Spring Boot",
+    icon: SiSpring,
+    proficiency: 40,
+    color: "#6DB33F",
+  },
+  { name: "Next.js", icon: SiNextdotjs, proficiency: 40, color: "#000000" },
+  { name: "React", icon: SiReact, proficiency: 70, color: "#61DAFB" },
+  { name: "Angular", icon: SiAngular, proficiency: 80, color: "#DD0031" },
+  { name: "MySQL", icon: SiMysql, proficiency: 80, color: "#00758F" },
+  { name: "MS SQL", icon: DiMsqlServer, proficiency: 70, color: "#CC2927" },
+  { name: "PostgreSQL", icon: SiPostgresql, proficiency: 60, color: "#336791" },
+  { name: "HTML5", icon: FaHtml5, proficiency: 90, color: "#E34C26" },
+  { name: "CSS3", icon: FaCss3Alt, proficiency: 90, color: "#1572B6" },
+  { name: "Sass", icon: SiSass, proficiency: 70, color: "#CD6799" },
+  {
+    name: "Tailwind CSS",
+    icon: SiTailwindcss,
+    proficiency: 60,
+    color: "#06B6D4",
+  },
+  { name: "Git", icon: SiGit, proficiency: 85, color: "#F1502F" },
+  { name: "FastAPI", icon: SiFastapi, proficiency: 80, color: "#009688" },
+  { name: "Firebase", icon: SiFirebase, proficiency: 60, color: "#FFCA28" },
+  { name: "TypeScript", icon: SiTypescript, proficiency: 70, color: "#3178C6" },
+  { name: "Express.js", icon: SiExpress, proficiency: 70, color: "#000000" },
+  { name: "Prisma", icon: SiPrisma, proficiency: 70, color: "#0C344B" },
+  { name: "SAP", icon: SiSap, proficiency: 70, color: "#0FAAFF" },
 ];
 
 export const about: AboutContent[] = [

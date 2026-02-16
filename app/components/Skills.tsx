@@ -7,9 +7,10 @@ interface SkillsProps {
   skills: Skill[];
   title: string;
   subtitle: string;
+  proficiencyLabel: string;
 }
 
-export function Skills({ skills, title, subtitle }: SkillsProps) {
+export function Skills({ skills, title, subtitle, proficiencyLabel }: SkillsProps) {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
@@ -20,14 +21,15 @@ export function Skills({ skills, title, subtitle }: SkillsProps) {
           <p className="hero-subtitle">{subtitle}</p>
         </div>
 
-        {/* Grid responsivo: 2 columnas en mobile, 4 en tablet, 6 en desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-5 md:gap-6">
+        {/* Grid responsivo: 3 columnas en mobile, 7 en laptop */}
+        <div className="grid grid-cols-3 gap-4 xl:grid-cols-7 xl:gap-5">
           {skills.map((skill) => (
             <SkillCard
               key={skill.name}
               skill={skill}
               isHovered={hoveredSkill === skill.name}
               onHover={setHoveredSkill}
+              proficiencyLabel={proficiencyLabel}
             />
           ))}
         </div>
@@ -40,14 +42,15 @@ interface SkillCardProps {
   skill: Skill;
   isHovered: boolean;
   onHover: (skillName: string | null) => void;
+  proficiencyLabel: string;
 }
 
-function SkillCard({ skill, isHovered, onHover }: SkillCardProps) {
+function SkillCard({ skill, isHovered, onHover, proficiencyLabel }: SkillCardProps) {
   const IconComponent = skill.icon;
 
   return (
     <div
-      className="skill-card group relative aspect-square w-full max-w-[60px] sm:max-w-[84px] md:max-w-[100px] lg:max-w-[112px] xl:max-w-[124px] mx-auto flex flex-col items-center justify-center cursor-pointer rounded-full border-2 border-current transition-all duration-300 hover:scale-110"
+      className="skill-card group relative aspect-square w-full max-w-[90px] md:max-w-[100px] lg:max-w-[112px] xl:max-w-[124px] mx-auto flex flex-col items-center justify-center cursor-pointer rounded-full border-2 border-current transition-all duration-300 hover:scale-110"
       onMouseEnter={() => onHover(skill.name)}
       onMouseLeave={() => onHover(null)}
       style={{
@@ -80,7 +83,7 @@ function SkillCard({ skill, isHovered, onHover }: SkillCardProps) {
               {skill.proficiency}%
             </div>
             <div className="text-xs sm:text-sm mt-2 text-center leading-tight">
-              Proficiency
+              {proficiencyLabel}
             </div>
           </>
         )}
