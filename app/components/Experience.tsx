@@ -11,7 +11,7 @@ interface ExperienceProps {
 export function Experience({ experiences, title }: ExperienceProps) {
   return (
     <section id="experience"
-      className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden"
+      className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden"
       data-snap
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 py-32">

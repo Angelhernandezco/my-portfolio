@@ -83,7 +83,7 @@ export const copy = {
 } as const;
 
 export const skills: Skill[] = [
-  { name: "Java", icon: FaJava, proficiency: 50, color: "#007396" },
+  { name: "Java", icon: FaJava, proficiency: 50, color: "#f89820" },
   { name: "Python", icon: SiPython, proficiency: 70, color: "#3776AB" },
   { name: "JavaScript", icon: SiJavascript, proficiency: 80, color: "#F7DF1E" },
   {

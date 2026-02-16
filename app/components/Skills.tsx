@@ -14,7 +14,7 @@ export function Skills({ skills, title, subtitle, proficiencyLabel }: SkillsProp
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
-    <section id="skills" className="flex min-h-screen lg:h-[calc(100vh-80px)] w-full flex-col items-center justify-center bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden pt-16" data-snap>
+    <section id="skills" className="flex min-h-screen lg:h-[calc(100vh-80px)] w-full flex-col items-center justify-center bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden pt-16" data-snap>
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-10 py-16 lg:py-0">
         <div className="space-y-4 text-center mb-12">
           <h2 className="hero-title">{title}</h2>

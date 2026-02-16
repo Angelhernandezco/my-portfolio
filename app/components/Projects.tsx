@@ -12,7 +12,7 @@ interface ProjectsProps {
 export function Projects({ projects, title }: ProjectsProps) {
   return (
     <section id="projects"
-      className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden"
+      className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden"
       data-snap
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 py-32">

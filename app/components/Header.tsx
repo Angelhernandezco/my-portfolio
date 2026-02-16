@@ -66,7 +66,7 @@ export function Header({
   }, [mobileMenuOpen]);
 
   return (
-    <header className="fixed top-0 w-full z-9999 bg-hero/80 backdrop-blur dark:bg-hero-dark/80 h-20">
+    <header className="fixed top-0 w-full z-9999 bg-hero/80 backdrop-blur h-20">
       <div className="mx-auto flex w-full items-center justify-between px-6 py-8 text-[15px] font-semibold tracking-wide sm:px-10">
         <button
           onClick={() => {
@@ -135,7 +135,7 @@ export function Header({
       </div>
       <nav
         ref={mobileMenuRef}
-        className="md:static fixed md:h-0 h-0 overflow-hidden opacity-0 left-0 right-0 w-full md:top-auto top-20 z-50 bg-hero dark:bg-hero-dark md:bg-transparent"
+        className="fixed overflow-hidden w-full top-19 z-9999 bg-hero shadow-lg md:hidden"
       >
         <div className="flex flex-col gap-4 px-6 pb-6 sm:px-10">
           {content.nav.map((item) => (
