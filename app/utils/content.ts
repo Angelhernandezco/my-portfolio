@@ -1,5 +1,6 @@
 import type { Skill } from "@/app/types/skills";
 import type { AboutContent } from "@/app/types/about";
+import type { Project } from "@/app/types/projects";
 import {
   SiReact,
   SiTypescript,
@@ -20,9 +21,12 @@ import { FaHtml5, FaCss3Alt, FaDatabase } from "react-icons/fa";
 
 export const copy = {
   es: {
-    role: "FULL STACK CAPABLE",
+    titleLine1: "INGENIERO",
+    titleLine2: "DE SOFTWARE",
+    role: "— PERFIL FULL STACK",
     nav: ["Proyectos", "Sobre mi", "Contacto"],
     maker: "CREADOR DE COSAS CON\nPASION Y EXCELENCIA",
+    projectsTitle: "PROYECTOS",
     skillsTitle: "HABILIDADES",
     skillsSubtitle:
       "PASA EL MOUSE SOBRE UNA HABILIDAD PARA VER EL NIVEL DE PROFICIENCIA",
@@ -43,9 +47,12 @@ export const copy = {
     instagram: "https://instagram.com/angelhernandezco",
   },
   en: {
-    role: "FULL STACK CAPABLE",
+    titleLine1: "SOFTWARE",
+    titleLine2: "ENGINEER",
+    role: "— FULL STACK CAPABLE",
     nav: ["Projects", "About", "Contact"],
     maker: "MAKER OF THINGS WITH\nPASSION AND EXCELLENCE",
+    projectsTitle: "PROJECTS",
     skillsTitle: "SKILLS",
     skillsSubtitle: "HOVER OVER A SKILL FOR CURRENT PROFICIENCY",
     aboutTitle: "ABOUT ME",
@@ -169,5 +176,31 @@ export const about: AboutContent[] = [
         color: "#3b82f6",
       },
     ],
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: "project-1",
+    title: "SVGL - A beautiful library with SVG logos",
+    description:
+      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+    image: "/projects/svgl.png",
+    technologies: ["Next.js", "Tailwind CSS", "React"],
+    links: {
+      code: "https://github.com",
+      preview: "https://svgl.app",
+    },
+  },
+  {
+    id: "project-2",
+    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    image: "/projects/adventjs.png",
+    technologies: ["Next.js", "Tailwind CSS", "JavaScript"],
+    links: {
+      preview: "https://adventjs.dev",
+    },
   },
 ];

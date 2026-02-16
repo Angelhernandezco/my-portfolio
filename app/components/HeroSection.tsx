@@ -4,20 +4,22 @@ import Image from "next/image";
 import { FallingText } from "./FallingText";
 
 interface HeroSectionProps {
+  titleLine1: string;
+  titleLine2: string;
   role: string;
   maker: string;
 }
 
-export function HeroSection({ role, maker }: HeroSectionProps) {
+export function HeroSection({ titleLine1, titleLine2, role, maker }: HeroSectionProps) {
   return (
     <main className="flex min-h-[calc(100vh-80px)] w-full items-center overflow-hidden pt-30" data-snap>
       <div className="mx-auto grid w-full gap-10 px-6 sm:px-10 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="hero-rise space-y-6">
           <div className="space-y-4">
             <h1 className="hero-title">
-              <FallingText text="FRONT-END" delay={1.4} />
+              <FallingText text={titleLine1} delay={1.4} />
               <span className="block">
-                <FallingText text="DEVELOPER" delay={1.7} />
+                <FallingText text={titleLine2} delay={1.7} />
               </span>
             </h1>
             <p className="hero-subtitle animate-soft-rise ">{role}</p>
