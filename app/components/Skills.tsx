@@ -13,7 +13,7 @@ export function Skills({ skills, title, subtitle }: SkillsProps) {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
-    <section className="flex min-h-screen lg:h-[calc(100vh-80px)] w-full flex-col items-center justify-center bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden" data-snap>
+    <section className="flex min-h-screen lg:h-[calc(100vh-80px)] w-full flex-col items-center justify-center bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden pt-16" data-snap>
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-10 py-16 lg:py-0">
         <div className="space-y-4 text-center mb-12">
           <h2 className="hero-title">{title}</h2>
@@ -21,7 +21,7 @@ export function Skills({ skills, title, subtitle }: SkillsProps) {
         </div>
 
         {/* Grid responsivo: 2 columnas en mobile, 4 en tablet, 6 en desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-5 md:gap-6">
           {skills.map((skill) => (
             <SkillCard
               key={skill.name}
@@ -47,7 +47,7 @@ function SkillCard({ skill, isHovered, onHover }: SkillCardProps) {
 
   return (
     <div
-      className="skill-card group relative aspect-square flex flex-col items-center justify-center cursor-pointer rounded-full border-2 border-current transition-all duration-300 hover:scale-110"
+      className="skill-card group relative aspect-square w-full max-w-[60px] sm:max-w-[84px] md:max-w-[100px] lg:max-w-[112px] xl:max-w-[124px] mx-auto flex flex-col items-center justify-center cursor-pointer rounded-full border-2 border-current transition-all duration-300 hover:scale-110"
       onMouseEnter={() => onHover(skill.name)}
       onMouseLeave={() => onHover(null)}
       style={{
