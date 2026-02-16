@@ -16,7 +16,7 @@ export function About({ content, title }: AboutProps) {
         <div className="grid grid-cols-1 lg:grid-cols-7 gap-12 lg:gap-12 w-full">
           {/* Columna: Foto */}
           <div className="flex justify-center lg:justify-start lg:col-span-1">
-            <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-current">
+            <div className="avatar">
               <Image
                 src="/portrait.jpeg"
                 alt="Angel Hernandez"

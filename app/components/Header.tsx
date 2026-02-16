@@ -36,7 +36,7 @@ export function Header({
   }, [mobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-40 bg-hero/80 backdrop-blur dark:bg-hero-dark/80 h-[80px]">
+    <header className="sticky top-0 z-40 bg-hero/80 backdrop-blur dark:bg-hero-dark/80 h-20">
       <div className="mx-auto flex w-full items-center justify-between px-6 py-8 text-[15px] font-semibold tracking-wide sm:px-10">
         <span className={isFirstRender.current ? "animate-soft-rise" : ""}>Angel Hernandez</span>
         <nav className="hidden items-center gap-8 md:flex">
