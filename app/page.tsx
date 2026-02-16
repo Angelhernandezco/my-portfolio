@@ -63,7 +63,7 @@ export default function Home() {
         title={content.aboutTitle}
       />
       <Experience experiences={experiences} title={content.experienceTitle} />
-      <Projects projects={projects} title={content.projectsTitle} />
+      {/* <Projects projects={projects} title={content.projectsTitle} /> */}
       <Skills
         skills={skills}
         title={content.skillsTitle}
