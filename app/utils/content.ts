@@ -27,6 +27,20 @@ export const copy = {
     skillsSubtitle:
       "PASA EL MOUSE SOBRE UNA HABILIDAD PARA VER EL NIVEL DE PROFICIENCIA",
     aboutTitle: "SOBRE MÍ",
+    contactTitle: "CONTACTO",
+    contactSubtitle: "Tengo justo lo que necesitas. Hablemos.",
+    phone: "+52 (668) 241 9119",
+    email: "covarrubias0angel@gmail.com",
+    location: "Sinaloa, México",
+    formName: "Nombre",
+    formEmail: "Email",
+    formSubject: "Asunto",
+    formMessage: "Mensaje",
+    formSubmit: "Enviar",
+    linkedin:
+      "https://linkedin.com/in/ángel-santiago-hernández-covarrubias-384470338",
+    github: "https://github.com/angelhernandezco",
+    instagram: "https://instagram.com/angelhernandezco",
   },
   en: {
     role: "FULL STACK CAPABLE",
@@ -35,6 +49,20 @@ export const copy = {
     skillsTitle: "SKILLS",
     skillsSubtitle: "HOVER OVER A SKILL FOR CURRENT PROFICIENCY",
     aboutTitle: "ABOUT ME",
+    contactTitle: "CONTACT",
+    contactSubtitle: "I have got just what you need. Lets talk.",
+    phone: "+52 (668) 241 9119",
+    email: "covarrubias0angel@gmail.com",
+    location: "Sinaloa, Mexico",
+    formName: "Name",
+    formEmail: "Email",
+    formSubject: "Subject",
+    formMessage: "Message",
+    formSubmit: "Submit",
+    linkedin:
+      "https://linkedin.com/in/ángel-santiago-hernández-covarrubias-384470338",
+    github: "https://github.com/angelhernandezco",
+    instagram: "https://instagram.com/angelhernandezco",
   },
 } as const;
 

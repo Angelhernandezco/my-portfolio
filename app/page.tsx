@@ -5,6 +5,7 @@ import { Header } from "@/app/components/Header";
 import { HeroSection } from "@/app/components/HeroSection";
 import { Skills } from "@/app/components/Skills";
 import { About } from "@/app/components/About";
+import { Contact } from "@/app/components/Contact";
 import { copy, skills, about } from "@/app/utils/content";
 
 export default function Home() {
@@ -63,6 +64,23 @@ export default function Home() {
       <About
         content={about.find((item) => item.title === lang) || about[0]}
         title={content.aboutTitle}
+      />
+      <Contact
+        title={content.contactTitle}
+        subtitle={content.contactSubtitle}
+        phone={content.phone}
+        email={content.email}
+        location={content.location}
+        linkedin={content.linkedin}
+        github={content.github}
+        instagram={content.instagram}
+        formLabels={{
+          name: content.formName,
+          email: content.formEmail,
+          subject: content.formSubject,
+          message: content.formMessage,
+          submit: content.formSubmit,
+        }}
       />
     </div>
   );
