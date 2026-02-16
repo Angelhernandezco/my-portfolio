@@ -10,7 +10,7 @@ interface AboutProps {
 
 export function About({ content, title }: AboutProps) {
   return (
-    <section className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden" data-snap>
+    <section id="about" className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden" data-snap>
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 py-16 lg:py-8 h-full flex items-center">
         {/* Grid responsivo: 1 columna en mobile, 5 en desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-7 gap-12 lg:gap-12 w-full">

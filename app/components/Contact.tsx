@@ -71,6 +71,7 @@ export function Contact({
 
   return (
     <section
+      id="contact"
       className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 dark:bg-hero-dark dark:text-ink-dark overflow-y-auto lg:overflow-hidden flex items-center justify-center"
       data-snap
     >

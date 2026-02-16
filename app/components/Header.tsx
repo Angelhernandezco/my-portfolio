@@ -29,6 +29,36 @@ export function Header({
     isFirstRender.current = false;
   }, []);
 
+  const getScrollTarget = (navItem: string): string => {
+    const targets: Record<string, string> = {
+      "Sobre mi": "about",
+      About: "about",
+      "Experiencia": "experience",
+      Experience: "experience",
+      "Proyectos": "projects",
+      Projects: "projects",
+      "Habilidades": "skills",
+      Skills: "skills",
+      "Contacto": "contact",
+      Contact: "contact",
+    };
+    return targets[navItem] || "";
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, navItem: string) => {
+    e.preventDefault();
+    const targetId = getScrollTarget(navItem);
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    if (mobileMenuOpen) {
+      onMobileMenuToggle();
+    }
+  };
+
   useEffect(() => {
     if (mobileMenuRef.current) {
       animateMobileMenu(mobileMenuRef.current, mobileMenuOpen, ".mobile-menu-item");
@@ -38,10 +68,26 @@ export function Header({
   return (
     <header className="sticky top-0 z-40 bg-hero/80 backdrop-blur dark:bg-hero-dark/80 h-20">
       <div className="mx-auto flex w-full items-center justify-between px-6 py-8 text-[15px] font-semibold tracking-wide sm:px-10">
-        <span className={isFirstRender.current ? "animate-soft-rise" : ""}>Angel Hernandez</span>
+        <button
+          onClick={() => {
+            const element = document.getElementById("hero");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }}
+          className="cursor-pointer hover:opacity-70 transition-opacity"
+          aria-label="Ir al inicio"
+        >
+          <span className={isFirstRender.current ? "animate-soft-rise" : ""}>Angel Hernandez</span>
+        </button>
         <nav className="hidden items-center gap-8 md:flex">
           {content.nav.map((item) => (
-            <a key={item} href="#" className={`nav-link ${isFirstRender.current ? "animate-soft-rise" : ""}`}>
+            <a
+              key={item}
+              href={`#${getScrollTarget(item)}`}
+              onClick={(e) => handleNavClick(e, item)}
+              className={`nav-link ${isFirstRender.current ? "animate-soft-rise" : ""}`}
+            >
               {item}
             </a>
           ))}
@@ -95,9 +141,9 @@ export function Header({
           {content.nav.map((item) => (
             <a
               key={item}
-              href="#"
+              href={`#${getScrollTarget(item)}`}
+              onClick={(e) => handleNavClick(e, item)}
               className="mobile-menu-item nav-link"
-              onClick={() => onMobileMenuToggle()}
             >
               {item}
             </a>

@@ -58,17 +58,17 @@ export default function Home() {
         onMobileMenuToggle={() => setMobileMenuOpen((prev) => !prev)}
       />
       <HeroSection titleLine1={content.titleLine1} titleLine2={content.titleLine2} role={content.role} maker={content.maker} />
-      <Projects projects={projects} title={content.projectsTitle} />
+      <About
+        content={about.find((item) => item.title === lang) || about[0]}
+        title={content.aboutTitle}
+      />
       <Experience experiences={experiences} title={content.experienceTitle} />
+      <Projects projects={projects} title={content.projectsTitle} />
       <Skills
         skills={skills}
         title={content.skillsTitle}
         subtitle={content.skillsSubtitle}
         proficiencyLabel={content.proficiencyLabel}
-      />
-      <About
-        content={about.find((item) => item.title === lang) || about[0]}
-        title={content.aboutTitle}
       />
       <Contact
         title={content.contactTitle}
