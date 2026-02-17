@@ -8,19 +8,18 @@ interface HeroSectionProps {
   titleLine2: string;
   role: string;
   maker: string;
-  animateFallingText?: boolean;
 }
 
-export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallingText = true }: HeroSectionProps) {
+export function HeroSection({ titleLine1, titleLine2, role, maker }: HeroSectionProps) {
   return (
     <main id="hero" className="flex min-h-[calc(100vh-80px)] w-full items-center overflow-hidden pt-30" data-snap>
       <div className="mx-auto grid w-full gap-10 px-6 sm:px-10 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="hero-rise space-y-6">
           <div className="space-y-4">
             <h1 className="hero-title">
-              <FallingText text={titleLine1} delay={1.4} enabled={animateFallingText} />
+              <FallingText text={titleLine1} delay={1.4} />
               <span className="block">
-                <FallingText text={titleLine2} delay={1.7} enabled={animateFallingText} />
+                <FallingText text={titleLine2} delay={1.7} />
               </span>
             </h1>
             <p className="hero-subtitle animate-soft-rise ">{role}</p>
@@ -41,9 +40,9 @@ export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallin
             />
           </div>
           <h2 className="hero-name hero-rise text-right">
-            <FallingText text="ANGEL" delay={1.6} enabled={animateFallingText} />
+            <FallingText text="ANGEL" delay={1.6} />
             <span className="block">
-              <FallingText text="HERNANDEZ" delay={1.85} enabled={animateFallingText} />
+              <FallingText text="HERNANDEZ" delay={1.85} />
             </span>
           </h2>
         </section>

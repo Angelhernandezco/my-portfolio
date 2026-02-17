@@ -70,7 +70,7 @@ export default function Home() {
         content={about.find((item) => item.title === lang) || about[0]}
         title={content.aboutTitle}
       />
-      <Experience experiences={experiences} title={content.experienceTitle} />
+      <Experience experiences={experiences} lang={lang} title={content.experienceTitle} />
       {/* <Projects projects={projects} title={content.projectsTitle} /> */}
       <Skills
         skills={skills}

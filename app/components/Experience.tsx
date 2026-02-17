@@ -4,11 +4,13 @@ import type { TimelineExperience } from "@/app/types/experience";
 import { ExperienceCard } from "./ExperienceCard";
 
 interface ExperienceProps {
-  experiences: TimelineExperience[];
+  experiences: Array<{ lang: "es" | "en"; data: TimelineExperience[] }>;
+  lang: "es" | "en";
   title: string;
 }
 
-export function Experience({ experiences, title }: ExperienceProps) {
+export function Experience({ experiences, lang, title }: ExperienceProps) {
+  const filteredExperiences = experiences.find((exp) => exp.lang === lang)?.data || [];
   return (
     <section id="experience"
       className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden"
@@ -26,7 +28,7 @@ export function Experience({ experiences, title }: ExperienceProps) {
           <div className="absolute left-2 lg:left-3 top-0 bottom-0 w-0.5 bg-current opacity-20"></div>
 
           <div className="space-y-16 lg:space-y-20">
-            {experiences.map((exp) => (
+            {filteredExperiences.map((exp) => (
               <ExperienceCard key={exp.id} experience={exp} />
             ))}
           </div>
