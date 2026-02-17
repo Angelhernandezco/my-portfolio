@@ -10,7 +10,7 @@
 
   /* Fixed header height (matches Header.tsx h-20) */
   --header-height: 5rem;
-  --snap-top-offset: calc(var(--header-height) + env(safe-area-inset-top, 0px));
+  --snap-top-offset: calc(env(safe-area-inset-top, 0px));
 }
 
 .dark {
