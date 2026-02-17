@@ -40,7 +40,7 @@ export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallin
               priority
             />
           </div>
-          <h2 className="hero-name hero-rise text-right">
+          <h2 className="hero-name hero-rise text-right mb-10">
             <FallingText text="ANGEL" delay={1.3} enabled={animateFallingText} />
             <span className="block">
               <FallingText text="HERNANDEZ" delay={1.55} enabled={animateFallingText} />
