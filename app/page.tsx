@@ -49,7 +49,7 @@ export default function Home() {
   const content = copy[lang];
 
   return (
-    <div className="scroll-container h-screen overflow-y-scroll bg-hero text-ink transition-colors duration-500 md:pt-20 pt-40">
+    <main className="scroll-container h-screen overflow-y-scroll bg-hero text-ink transition-colors duration-500">
       <div className="page-reveal" aria-hidden="true" />
       <Header
         isDark={isDark}
@@ -95,6 +95,6 @@ export default function Home() {
           submit: content.formSubmit,
         }}
       />
-    </div>
+    </main>
   );
 }

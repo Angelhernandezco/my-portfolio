@@ -230,11 +230,6 @@ section[data-snap] {
   scroll-snap-stop: always;
 }
 
-main[data-snap] {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
 
 ::-webkit-scrollbar {
   width: 8px;

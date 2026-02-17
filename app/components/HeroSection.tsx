@@ -13,7 +13,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallingText = true }: HeroSectionProps) {
   return (
-    <main id="hero" className="flex min-h-screen w-full items-center overflow-hidden pt-24 md:pt-30" data-snap>
+    <section id="hero" className="min-h-screen pt-24 md:pt-30 pb-6 items-center flex w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden" data-snap>
       <div className="mx-auto grid w-full gap-10 px-6 sm:px-10 md:grid-cols-[1.1fr_0.9fr]">
         <section className="hero-rise space-y-6">
           <div className="space-y-4">
@@ -40,7 +40,7 @@ export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallin
               priority
             />
           </div>
-          <h2 className="hero-name hero-rise text-right mb-10">
+          <h2 className="hero-name hero-rise text-right mb-2">
             <FallingText text="ANGEL" delay={1.3} enabled={animateFallingText} />
             <span className="block">
               <FallingText text="HERNANDEZ" delay={1.55} enabled={animateFallingText} />
@@ -48,6 +48,6 @@ export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallin
           </h2>
         </section>
       </div>
-    </main>
+    </section>
   );
 }
