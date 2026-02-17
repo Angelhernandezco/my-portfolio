@@ -14,6 +14,7 @@ export default function Home() {
   const [isDark, setIsDark] = useState(false);
   const [lang, setLang] = useState<"es" | "en">("es");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem("theme");
@@ -27,6 +28,7 @@ export default function Home() {
 
     setIsDark(initialDark);
     setLang(storedLang === "en" ? "en" : "es");
+    setIsHydrated(true);
   }, []);
 
   useEffect(() => {
@@ -57,7 +59,13 @@ export default function Home() {
         mobileMenuOpen={mobileMenuOpen}
         onMobileMenuToggle={() => setMobileMenuOpen((prev) => !prev)}
       />
-      <HeroSection titleLine1={content.titleLine1} titleLine2={content.titleLine2} role={content.role} maker={content.maker} />
+      <HeroSection
+        titleLine1={content.titleLine1}
+        titleLine2={content.titleLine2}
+        role={content.role}
+        maker={content.maker}
+        animateFallingText={isHydrated}
+      />
       <About
         content={about.find((item) => item.title === lang) || about[0]}
         title={content.aboutTitle}
