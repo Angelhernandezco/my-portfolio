@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
 
@@ -78,12 +79,12 @@ export function Contact({
           subject: "",
           message: "",
         });
-        alert("Mensaje enviado correctamente 🚀");
+        toast.success("Mensaje enviado correctamente");
       } else {
-        alert("Error al enviar el mensaje ❌");
+        toast.error("Error al enviar el mensaje");
       }
     } catch (error) {
-      alert("Error de conexión ❌");
+      toast.error("Error de conexión");
     } finally {
       setIsSubmitting(false);
     }
