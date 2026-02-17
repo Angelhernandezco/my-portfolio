@@ -56,18 +56,38 @@ export function Contact({
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulamos un envío de formulario
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+    try {
+      const form = e.currentTarget;
+      const formDataObj = new FormData(form);
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/92da850291005029a9ee5121306a0b25",
+        {
+          method: "POST",
+          body: formDataObj,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        alert("Mensaje enviado correctamente 🚀");
+      } else {
+        alert("Error al enviar el mensaje ❌");
+      }
+    } catch (error) {
+      alert("Error de conexión ❌");
+    } finally {
       setIsSubmitting(false);
-      alert("Message sent successfully!");
-    }, 1000);
-  };
+    }
+};
 
   return (
     <section
@@ -185,6 +205,11 @@ export function Contact({
           {/* Contact Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* CONFIG */}
+              <input type="text" name="_honey" style={{ display: "none" }} />
+              <input type="hidden" name="_format" value="json" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio" />
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
