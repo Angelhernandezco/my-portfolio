@@ -217,10 +217,6 @@ body {
   .hero-tag {
     letter-spacing: 0.12em;
   }
-
-  main {
-    min-height: auto;
-  }
 }
 
 /* Scroll Container */
