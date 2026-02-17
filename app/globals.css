@@ -129,6 +129,12 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
 
+@media (max-width: 1023px) {
+  .portrait-frame {
+    width: 200px;
+  }
+}
+
 .dark .portrait-frame {
   background: linear-gradient(135deg, #2a2726, #1a1816);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);

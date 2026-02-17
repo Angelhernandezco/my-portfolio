@@ -14,7 +14,7 @@ interface HeroSectionProps {
 export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallingText = true }: HeroSectionProps) {
   return (
     <main id="hero" className="flex min-h-screen w-full items-center overflow-hidden pt-24 md:pt-30" data-snap>
-      <div className="mx-auto grid w-full gap-10 px-6 sm:px-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="mx-auto grid w-full gap-10 px-6 sm:px-10 md:grid-cols-[1.1fr_0.9fr]">
         <section className="hero-rise space-y-6">
           <div className="space-y-4">
             <h1 className="hero-title">
