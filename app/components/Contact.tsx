@@ -77,7 +77,7 @@ export function Contact({
     >
       <div className="mx-auto w-full max-w-4xl px-6 sm:px-10 py-16 lg:py-8">
         {/* Header */}
-        <div className="text-center mb-12 lg:mb-16 space-y-4">
+        <div className="text-center my-12 lg:mb-16 space-y-4">
           <h2 className="hero-title">{title}</h2>
           <p className="hero-subtitle text-lg sm:text-xl">
             {subtitle}
@@ -233,7 +233,7 @@ export function Contact({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 sm:py-4 bg-stone-700 dark:bg-stone-800 hover:bg-stone-800 dark:hover:bg-stone-900 text-white rounded-lg font-bold text-base sm:text-lg uppercase tracking-wider transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full px-6 py-3 sm:py-4 sm:mb-8 bg-stone-700 dark:bg-stone-800 hover:bg-stone-800 dark:hover:bg-stone-900 text-white rounded-lg font-bold text-base sm:text-lg uppercase tracking-wider transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 {isSubmitting ? "Sending..." : formLabels.submit}
               </button>
