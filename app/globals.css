@@ -6,6 +6,7 @@
   --foreground: #141313;
   --accent: #111111;
   --accent-soft: #5c5c5c;
+  --scrollbar-size: 8px;
 }
 
 .dark {
@@ -232,7 +233,7 @@ section[data-snap] {
 
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: var(--scrollbar-size);
 }
 
 ::-webkit-scrollbar-track {

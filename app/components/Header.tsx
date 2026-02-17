@@ -66,7 +66,10 @@ export function Header({
   }, [mobileMenuOpen]);
 
   return (
-    <header className="fixed top-0 w-full z-9999 bg-hero/80 backdrop-blur h-20 animate-soft-rise">
+    <header
+      className="fixed top-0 left-0 z-9999 bg-hero/80 backdrop-blur h-20 animate-soft-rise"
+      style={{ width: "calc(100vw - var(--scrollbar-size, 0px))" }}
+    >
       <div className="mx-auto flex w-full items-center justify-between px-6 py-8 text-[15px] font-semibold tracking-wide sm:px-10">
         <button
           onClick={() => {
@@ -135,7 +138,8 @@ export function Header({
       </div>
       <nav
         ref={mobileMenuRef}
-        className="fixed overflow-hidden w-full top-20 z-9999 bg-hero shadow-lg md:hidden h-0 opacity-0"
+        className="fixed overflow-hidden top-20 left-0 z-9999 bg-hero shadow-lg md:hidden h-0 opacity-0"
+        style={{ width: "calc(100vw - var(--scrollbar-size, 0px))" }}
       >
         <div className="flex flex-col gap-4 px-6 pb-6 sm:px-10">
           {content.nav.map((item) => (
