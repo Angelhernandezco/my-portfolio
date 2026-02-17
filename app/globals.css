@@ -7,6 +7,10 @@
   --accent: #111111;
   --accent-soft: #5c5c5c;
   --scrollbar-size: 8px;
+
+  /* Fixed header height (matches Header.tsx h-20) */
+  --header-height: 5rem;
+  --snap-top-offset: calc(var(--header-height) + env(safe-area-inset-top, 0px));
 }
 
 .dark {
@@ -223,12 +227,27 @@ body {
 /* Scroll Container */
 .scroll-container {
   scroll-snap-type: y mandatory;
+
+  /* Mobile browsers use dynamic viewport; dvh is more accurate than vh */
+  height: 100dvh;
+
+  /* Prevent snapped sections from landing under the fixed header */
+  scroll-padding-top: var(--snap-top-offset);
+  scroll-padding-bottom: env(safe-area-inset-bottom, 0px);
+
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Sections Scroll Snap */
 section[data-snap] {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+
+  /* Also affects scrollIntoView/anchor jumps */
+  scroll-margin-top: var(--snap-top-offset);
+
+  /* Match container dynamic viewport on mobile */
+  min-height: 100dvh;
 }
 
 
@@ -260,7 +279,7 @@ section[data-snap] {
   }
 
   ::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: rgb(87 83 78 / 0.10);
     box-shadow: none;
   }
 }
