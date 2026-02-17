@@ -27,7 +27,7 @@ export default function Home() {
       : prefersDark;
 
     setIsDark(initialDark);
-    setLang(storedLang === "en" ? "en" : "es");
+    setLang(storedLang === "en" ? "en" : "en");
     setIsHydrated(true);
   }, []);
 
