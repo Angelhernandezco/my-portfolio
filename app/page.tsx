@@ -12,7 +12,7 @@ import { copy, skills, projects, about, experiences } from "@/app/utils/content"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
-  const [lang, setLang] = useState<"es" | "en">("es");
+  const [lang, setLang] = useState<"es" | "en">("en");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
 
