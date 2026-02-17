@@ -93,12 +93,12 @@ export function Contact({
   return (
     <section
       id="contact"
-      className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden flex items-center justify-center"
+      className="min-h-screen pt-24 pb-6 w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden flex items-center justify-center"
       data-snap
     >
-      <div className="mx-auto w-full max-w-4xl px-6 sm:px-10 py-16 lg:py-8">
+      <div className="mx-auto w-full max-w-4xl px-6 sm:px-10">
         {/* Header */}
-        <div className="text-center my-12 lg:mb-16 space-y-4">
+        <div className="text-center mb-8 lg:mb-16 space-y-4">
           <h2 className="hero-title">{title}</h2>
           <p className="hero-subtitle text-lg sm:text-xl">
             {subtitle}

@@ -13,10 +13,10 @@ export function Experience({ experiences, lang, title }: ExperienceProps) {
   const filteredExperiences = experiences.find((exp) => exp.lang === lang)?.data || [];
   return (
     <section id="experience"
-      className="min-h-screen lg:h-[calc(100vh-80px)] w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden"
+      className="min-h-screen pt-24 pb-6 flex items-center w-full bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden"
       data-snap
     >
-      <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 py-32">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-10">
         {/* Header */}
         <div className="flex items-center space-x-3 mb-16 lg:mb-20">
           <h2 className="hero-title">{title}</h2>
