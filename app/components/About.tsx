@@ -41,7 +41,7 @@ export function About({ content, title }: AboutProps) {
               </div>
 
               {content.aboutText.map((paragraph, index) => (
-                <p key={index} className="text-base sm:text-lg lg:text-sm leading-relaxed text-justify">
+                <p key={index} className="text-base sm:text-lg lg:text-sm leading-relaxed ">
                   {paragraph}
                 </p>
               ))}
@@ -54,7 +54,7 @@ export function About({ content, title }: AboutProps) {
                 <div className="h-1 w-32 bg-current opacity-30"></div>
 
                 {content.whatSetsText.map((paragraph, index) => (
-                  <p key={index} className="text-base sm:text-lg lg:text-sm leading-relaxed text-justify">
+                  <p key={index} className="text-base sm:text-lg lg:text-sm leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
@@ -66,7 +66,7 @@ export function About({ content, title }: AboutProps) {
           <div className="flex flex-col justify-center lg:col-span-2">
             <div className="relative">
               {/* Línea vertical */}
-              <div className="absolute left-6 sm:left-8 lg:left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-current to-transparent opacity-30"></div>
+              <div className="absolute left-6 sm:left-10 lg:left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-current to-transparent opacity-30"></div>
 
               {/* Items de timeline */}
               <div className="space-y-8 sm:space-y-12 lg:space-y-6">
@@ -93,7 +93,7 @@ function TimelineItem({ item, index }: TimelineItemProps) {
     <div className="relative pl-24 sm:pl-32 lg:pl-20">
       {/* Círculo del timeline */}
       <div
-        className="absolute left-0 sm:left-2 lg:left-0 top-1 w-12 h-12 sm:w-16 sm:h-16 lg:w-10 lg:h-10 rounded-full flex items-center justify-center border-4 transition-transform duration-300 hover:scale-110"
+        className="absolute left-0 sm:left-2 lg:left-0 top-1 w-12 h-12 sm:w-16 sm:h-16 lg:w-10 lg:h-10 rounded-full flex items-center justify-center border-3 transition-transform duration-300 hover:scale-110"
         style={{
           backgroundColor: item.color,
           borderColor: "currentColor",
