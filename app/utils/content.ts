@@ -20,6 +20,9 @@ import {
   SiMysql,
   SiAngular,
   SiSpring,
+  SiIonic,
+  SiAndroidstudio,
+  SiGithub,
 } from "react-icons/si";
 import { FaHtml5, FaCss3Alt, FaJava } from "react-icons/fa";
 import { DiMsqlServer } from "react-icons/di";
@@ -89,6 +92,7 @@ export const skills: Skill[] = [
   { name: "Java", icon: FaJava, proficiency: 50, color: "#f89820" },
   { name: "Python", icon: SiPython, proficiency: 70, color: "#3776AB" },
   { name: "JavaScript", icon: SiJavascript, proficiency: 80, color: "#F7DF1E" },
+  { name: "TypeScript", icon: SiTypescript, proficiency: 70, color: "#3178C6" },
   {
     name: "Spring Boot",
     icon: SiSpring,
@@ -111,12 +115,19 @@ export const skills: Skill[] = [
     color: "#06B6D4",
   },
   { name: "Git", icon: SiGit, proficiency: 85, color: "#F1502F" },
+  { name: "GitHub", icon: SiGithub, proficiency: 85, color: "#181717" },
   { name: "FastAPI", icon: SiFastapi, proficiency: 80, color: "#009688" },
   { name: "Firebase", icon: SiFirebase, proficiency: 60, color: "#FFCA28" },
-  { name: "TypeScript", icon: SiTypescript, proficiency: 70, color: "#3178C6" },
   { name: "Express.js", icon: SiExpress, proficiency: 70, color: "#000000" },
   { name: "Prisma", icon: SiPrisma, proficiency: 70, color: "#0C344B" },
   { name: "SAP", icon: SiSap, proficiency: 70, color: "#0FAAFF" },
+  { name: "Ionic", icon: SiIonic, proficiency: 70, color: "#498AFF" },
+  {
+    name: "Android\nStudio",
+    icon: SiAndroidstudio,
+    proficiency: 50,
+    color: "#3DDC84",
+  },
 ];
 
 export const about: AboutContent[] = [

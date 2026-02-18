@@ -41,7 +41,7 @@ export function Skills({ skills, title, subtitle, subtitleMobile, proficiencyLab
         </div>
 
         {/* Grid responsivo: 3 columnas en mobile, 7 en laptop */}
-        <div className="grid grid-cols-3 gap-4 lg:grid-cols-5 xl:grid-cols-7 xl:gap-5">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-4 lg:grid-cols-6 xl:grid-cols-8 xl:gap-5">
           {skills.map((skill) => (
             <SkillCard
               key={skill.name}

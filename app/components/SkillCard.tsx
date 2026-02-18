@@ -62,7 +62,7 @@ export function SkillCard({
               style={{ color: skill.color }}
             />
             {/* Nombre */}
-            <div className="text-xs sm:text-sm font-medium text-center leading-tight px-1">
+            <div className="text-xs sm:text-sm font-medium text-center leading-tight px-1 whitespace-pre-line">
               {skill.name}
             </div>
           </>
