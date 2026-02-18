@@ -36,7 +36,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
               {experience.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-block px-3 py-1 text-xs font-medium bg-stone-500 text-white  rounded-full border hover:bg-stone-700  transition-colors"
+                  className="inline-block px-3 py-1 text-xs font-medium bg-stone-500 text-white  rounded-full hover:bg-stone-700  transition-colors"
                 >
                   {tech}
                 </span>
