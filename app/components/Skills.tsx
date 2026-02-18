@@ -1,24 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Skill } from "@/app/types/skills";
+import { SkillCard } from "./SkillCard";
 
 interface SkillsProps {
   skills: Skill[];
   title: string;
   subtitle: string;
+  subtitleMobile: string;
   proficiencyLabel: string;
 }
 
-export function Skills({ skills, title, subtitle, proficiencyLabel }: SkillsProps) {
+export function Skills({ skills, title, subtitle, subtitleMobile, proficiencyLabel }: SkillsProps) {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detectar si es móvil (pantalla menor a 768px)
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    // Limpiar skill seleccionada cuando cambia entre móvil y desktop
+    setHoveredSkill(null);
+  }, [isMobile]);
 
   return (
     <section id="skills" className="flex min-h-screen pt-24 pb-6 w-full flex-col items-center justify-center bg-hero text-ink transition-colors duration-500 overflow-y-auto lg:overflow-hidden" data-snap>
       <div className="mx-auto w-full max-w-6xl px-6 sm:px-10 ">
         <div className="space-y-4 text-center mb-12">
           <h2 className="hero-title">{title}</h2>
-          <p className="hero-subtitle">{subtitle}</p>
+          <p className="hero-subtitle">{isMobile ? subtitleMobile : subtitle}</p>
         </div>
 
         {/* Grid responsivo: 3 columnas en mobile, 7 en laptop */}
@@ -30,64 +49,11 @@ export function Skills({ skills, title, subtitle, proficiencyLabel }: SkillsProp
               isHovered={hoveredSkill === skill.name}
               onHover={setHoveredSkill}
               proficiencyLabel={proficiencyLabel}
+              isMobile={isMobile}
             />
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-interface SkillCardProps {
-  skill: Skill;
-  isHovered: boolean;
-  onHover: (skillName: string | null) => void;
-  proficiencyLabel: string;
-}
-
-function SkillCard({ skill, isHovered, onHover, proficiencyLabel }: SkillCardProps) {
-  const IconComponent = skill.icon;
-
-  return (
-    <div
-      className="skill-card group relative aspect-square w-full max-w-[90px] md:max-w-[100px] lg:max-w-[112px] xl:max-w-[124px] mx-auto flex flex-col items-center justify-center cursor-pointer rounded-full border-2 border-current transition-all duration-300 hover:scale-110"
-      onMouseEnter={() => onHover(skill.name)}
-      onMouseLeave={() => onHover(null)}
-      style={{
-        opacity: isHovered ? 0.7 : 1,
-      }}
-    >
-      {/* Fondo hover */}
-      {isHovered && (
-        <div className="absolute inset-0 rounded-full bg-current opacity-10 transition-opacity duration-300" />
-      )}
-
-      {/* Contenido */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-        {!isHovered ? (
-          <>
-            {/* Icon */}
-            <IconComponent
-              className="mb-2 text-3xl sm:text-4xl transition-colors duration-300"
-              style={{ color: skill.color }}
-            />
-            {/* Nombre */}
-            <div className="text-xs sm:text-sm font-medium text-center leading-tight px-1">
-              {skill.name}
-            </div>
-          </>
-        ) : (
-          <>
-            {/* Nivel de proficiencia */}
-            <div className="text-2xl sm:text-4xl font-bold">
-              {skill.proficiency}%
-            </div>
-            <div className="text-xs sm:text-sm mt-2 text-center leading-tight">
-              {proficiencyLabel}
-            </div>
-          </>
-        )}
-      </div>
-    </div>
   );
 }

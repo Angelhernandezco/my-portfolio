@@ -76,6 +76,7 @@ export default function Home() {
         skills={skills}
         title={content.skillsTitle}
         subtitle={content.skillsSubtitle}
+        subtitleMobile={content.skillsSubtitleMobile}
         proficiencyLabel={content.proficiencyLabel}
       />
       <Contact

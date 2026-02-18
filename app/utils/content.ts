@@ -35,6 +35,8 @@ export const copy = {
     skillsTitle: "HABILIDADES",
     skillsSubtitle:
       "PASA EL MOUSE SOBRE UNA HABILIDAD PARA VER EL NIVEL DE PROFICIENCIA",
+    skillsSubtitleMobile:
+      "TOCA UNA HABILIDAD PARA VER EL NIVEL DE PROFICIENCIA",
     proficiencyLabel: "Proficiencia",
     aboutTitle: "SOBRE MÍ",
     experienceTitle: "EXPERIENCIA LABORAL",
@@ -62,6 +64,7 @@ export const copy = {
     projectsTitle: "PROJECTS",
     skillsTitle: "SKILLS",
     skillsSubtitle: "HOVER OVER A SKILL FOR CURRENT PROFICIENCY",
+    skillsSubtitleMobile: "TAP A SKILL TO SEE PROFICIENCY LEVEL",
     proficiencyLabel: "Proficiency",
     aboutTitle: "ABOUT ME",
     experienceTitle: "WORK EXPERIENCE",
