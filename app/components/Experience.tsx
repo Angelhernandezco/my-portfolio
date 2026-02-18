@@ -23,7 +23,7 @@ export function Experience({ experiences, lang, title }: ExperienceProps) {
         </div>
 
         {/* Experience Timeline */}
-        <div className="relative max-w-5xl">
+        <div className="relative">
           {/* Vertical line */}
           <div className="absolute left-2 lg:left-3 top-0 bottom-0 w-0.5 bg-current opacity-20"></div>
 
