@@ -33,7 +33,7 @@ export function HeroSection({ titleLine1, titleLine2, role, maker, animateFallin
         <section className="relative flex flex-col items-end justify-center gap-10">
           <div className="portrait-frame hero-rise overflow-hidden">
             <Image
-              src="/portrait.jpeg"
+              src="/yo-portfolio.jpeg"
               alt="Angel Hernandez"
               fill
               className="object-cover"
