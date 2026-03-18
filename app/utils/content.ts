@@ -115,7 +115,7 @@ export const skills: Skill[] = [
     color: "#06B6D4",
   },
   { name: "Git", icon: SiGit, proficiency: 85, color: "#F1502F" },
-  { name: "GitHub", icon: SiGithub, proficiency: 85, color: "#181717" },
+  { name: "GitHub", icon: SiGithub, proficiency: 85, color: "#000000" },
   { name: "FastAPI", icon: SiFastapi, proficiency: 80, color: "#009688" },
   { name: "Firebase", icon: SiFirebase, proficiency: 60, color: "#FFCA28" },
   { name: "Express.js", icon: SiExpress, proficiency: 70, color: "#000000" },
